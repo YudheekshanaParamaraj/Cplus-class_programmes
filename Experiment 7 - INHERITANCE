@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class Shape {
+    public:
+    void setDimensions(double length, double width) {
+    length_ = length;
+    width_ = width;
+}
+virtual double calculateArea() {
+    return length_ * width_;
+}
+protected:
+    double length_;
+    double width_;
+};
+    class Rectangle : public Shape {
+    public:
+    double calculateArea() override {
+    return length_ * width_; 
+} };
+
+int main() {
+    float x,y;
+    Rectangle rectangle;
+    cout<<"EXPERIMENT 7:INHERITANCE: YUDHEEKSHANA"<<endl;
+    cout<<"Enter the length:";
+    cin>>x;
+    cout<<"Enter the width:";
+    cin>>y;
+    rectangle.setDimensions(5.0, 3.0);
+    cout << "Area of Rectangle: " << rectangle.calculateArea() << endl;
+    return 0;
+}
