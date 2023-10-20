@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class MathOperations {
+    public:
+    int add(int a, int b) {
+    return a + b; }
+    double add(double a, double b) {
+    return a + b; }
+    string add(const string& str1, const string& str2) {
+    return str1 + str2; }
+};
+int main() {
+    MathOperations math;
+    cout<<"EXPERIMENT 6 OVERLOADING FUNCTIONS - YUDHEEKSHANA "<<endl;
+    int result1 = math.add(5, 7);
+    cout << "Result of adding integers: " << result1 << endl;
+    double result2 = math.add(3.14, 2.71);
+    cout << "Result of adding doubles: " << result2 << endl;
+    string result3 = math.add("Hello, ", "world!");
+    cout << "Result of string concatenation: " << result3 <<endl;
+return 0;
+}
